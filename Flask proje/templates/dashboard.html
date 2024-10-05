@@ -1,0 +1,19 @@
+{% extends "layout1.html" %}
+
+{% block body %}
+<h3>Kontrol Paneli</h3>
+<p> Hoşgeldiniz {{session["email"]}} </p>
+
+<a href={{url_for("addarticle")}} class ="btn btn-danger">Makale ekle </a>
+<br>
+<p>Makaleleriniz</p>
+{%for d in data%}
+<p> <a href="article/{{ d.id }}">{{ d.title }}</a>, {{ d.author }}</p>
+
+<a href="edit/{{d.id}}">Güncelle</a>
+<a href="delete/{{d.id}}">Sil</a>
+{%endfor%}
+
+{% endblock body %}
+
+

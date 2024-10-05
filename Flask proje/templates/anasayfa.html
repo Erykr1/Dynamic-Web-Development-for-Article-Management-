@@ -1,0 +1,24 @@
+{% extends "layout1.html" %}
+{% block body %}
+
+<div class="jumbotron">
+<h3>Bloğuma hoş geldiniz</h3>
+<p> Yazılarınızı bekliyoruz!</p>
+</div>
+{% if answer=="evet" %}
+<p> cevap evet </p>
+{%else %}
+<p>cevap hayır</p>
+{%endif%}
+
+<ul>
+{% for sözlük in _sözlüklistesi %}
+    <li> id:{{sözlük.id}} title:{{sözlük.title}} </li>
+{% endfor %}
+</ul>
+      
+
+    {% endblock %}
+
+
+

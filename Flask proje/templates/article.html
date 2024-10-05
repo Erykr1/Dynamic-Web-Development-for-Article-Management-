@@ -1,0 +1,10 @@
+{% extends "layout1.html" %}
+{% block body %}
+{%for d in data%}
+<p> {{d.title,d.author,d.created_date}} </p>
+
+{%endfor%}
+{% endblock body %}
+
+
+
